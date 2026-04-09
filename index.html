@@ -167,18 +167,34 @@ button:hover{
   padding:40px;
   flex-direction:column;
   justify-content:center;
-  align-items:right;
+  align-items:center;
   font-size:15px;
-  line-height:1.7;
+  line-height:1.8;
   opacity:0;
-  transform:translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform:translateY(80px) scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
   position:relative;
+  max-width:700px;
+  margin:auto;
+  text-align:center;
 }
+
 .message.show{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+.message p{
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 1.2s ease;
+}
+
+.message.show p{
   opacity:1;
   transform:translateY(0);
 }
+  
 .back-message{
   position:fixed; /* supaya selalu terlihat */
   top:30px;
