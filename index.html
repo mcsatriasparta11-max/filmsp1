@@ -314,6 +314,7 @@ function openMessage(){
   message.style.display="flex";
   const backBtn=document.getElementById("back-message");
   backBtn.style.display="block";
+  window.scrollTo({ top: 0, behavior: "smooth" }); // scroll ke atas
   setTimeout(()=>{ message.classList.add("show"); },50);
 }
 
