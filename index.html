@@ -326,14 +326,19 @@ function openMessage(){
   const gallery=document.getElementById("gallery");
   gallery.classList.remove("show");
   gallery.style.display="none";
+
+  window.scrollTo({ top: 0 });
+
   const message=document.getElementById("message");
   message.style.display="flex";
+
   const backBtn=document.getElementById("back-message");
   backBtn.style.display="block";
-  window.scrollTo({ top: 0, behavior: "smooth" }); // scroll ke atas
-  setTimeout(()=>{ message.classList.add("show"); },50);
-}
 
+  setTimeout(()=>{
+    message.classList.add("show");
+  },200);
+}
 const backBtn=document.getElementById("back-message");
 backBtn.addEventListener("click",()=>{
   const message=document.getElementById("message");
