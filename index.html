@@ -300,6 +300,9 @@ html{scroll-behavior:smooth;}
 
 <script>
 function openMemory(){
+
+  openFullscreen(); // ⬅️ TAMBAHKAN INI
+  
   document.getElementById("start").classList.add("hidden");
   confetti({particleCount:150,spread:70,origin:{y:0.6},colors:['#ff4d6d','#ffcc66','#66ccff','#99ff99']});
   setTimeout(()=>{
@@ -382,6 +385,18 @@ function fadeInAudio(audio,duration=2000){
     if(vol>=1){vol=1; clearInterval(fade);}
     audio.volume=vol;
   },interval);
+}
+
+  function openFullscreen() {
+  let elem = document.documentElement;
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { // Safari
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { // IE/Edge lama
+    elem.msRequestFullscreen();
+  }
 }
 </script>
 </body>
